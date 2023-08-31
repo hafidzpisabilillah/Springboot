@@ -8,6 +8,7 @@ import org.hibernate.annotations.GenericGenerator;
 
 import javax.persistence.*;
 import java.io.Serializable;
+import java.util.List;
 import java.util.UUID;
 
 @Entity
@@ -15,21 +16,21 @@ import java.util.UUID;
 @Getter
 @NoArgsConstructor
 @AllArgsConstructor
-@Table(name="tbl_barang", schema = "sample")
-public class Barang implements Serializable {
+@Table(name="tbl_mobil", schema = "sample")
+public class Mobil implements Serializable {
     @Id
     @GenericGenerator(name = "uuid2", strategy = "uuid2")
     @GeneratedValue(strategy = GenerationType.IDENTITY, generator = "uuid2")
-    @Column(name = "id_barang")
-    private UUID idBarang;
+    @Column(name = "id_mobil")
+    private UUID idMobil;
 
-    @Column(name = "nama_barang", length = 20, nullable = false)
-    private String namaBarang;
+    @Column(name = "name", nullable = false)
+    private String name;
 
-    @Column(name = "harga")
-    private Integer harga;
+    @Column(name = "models", nullable = false)
+    private String models;
 
-    @Column(name = "stok")
-    private Integer stok;
+    @Column(name = "id_user", nullable = false)
+    private UUID idUser;
 
 }

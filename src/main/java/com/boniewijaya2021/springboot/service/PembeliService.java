@@ -7,7 +7,6 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Service;
-import sun.security.util.Pem;
 
 import java.util.*;
 
@@ -35,7 +34,9 @@ public class PembeliService {
                 object1.setNoTelp(map.getNoTelp());
                 objectSave.add(object1);
             }
-
+//            .save(Pembeli);
+//            .save(Barang);
+//            .save(Transaksi);
             dataPembeliRepository.saveAll(objectSave);
             //dataPembeliRepository.save(pembeli);
             msg.setStatus(true);

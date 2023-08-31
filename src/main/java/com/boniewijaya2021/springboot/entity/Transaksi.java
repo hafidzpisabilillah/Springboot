@@ -23,13 +23,11 @@ public class Transaksi implements Serializable {
     @Column(name = "id_transaksi")
     private UUID idTransaksi;
 
-    @ManyToOne
-    @JoinColumn(name = "id_barang")
-    private Barang barang;
+    @Column(name = "id_barang")
+    private UUID idBarang;
 
-    @ManyToOne
-    @JoinColumn(name = "id_pembeli")
-    private Pembeli pembeli;
+    @Column(name = "id_pembeli")
+    private UUID idPembeli;
 
     @Column(name = "tanggal")
     private Date tanggal;
