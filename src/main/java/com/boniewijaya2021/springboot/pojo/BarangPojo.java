@@ -14,3 +14,5 @@ public class BarangPojo {
     private Integer stok;
     private Supplier supplier;
 }
+
+//hafidz
